@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Example: How to use Text WildCard Area plugin.">
+    <meta name="author" content="Rafael Cachoeira, @raafacachoeira">
+
+    <title>Text WildCard Area.</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <style>
+        .tag.tag--available {
+            cursor: pointer;
+            font-weight: 700;
+        }
+        
+        .tag.tag--unavailable {
+            cursor: pointer;
+            font-weight: normal;
+            font-style: italic;
+            text-decoration: line-through !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row mt-2">
+            <form class="w-100">
+                <div class="form-group">
+
+                    <label for="MyTextWildCardArea">My TextWildCard Area</label>
+                    <textarea id="MyTextWildCardArea" class="my-text-wildcard-area rounded w-100" rows="3" style="height: 60px" placeholder="Insert here your text with wildcards"></textarea>
+
+                    <span class="text-muted">Type or click on the tags bellow</span>
+
+                    <nav class="navbar navbar-expand-lg">
+                        <ul class="navbar-nav" data-toggle="tag" data-target="#MyTextWildCardArea">
+                            <li class="nav-item"><a class="tag tag--available" data-tag="[ExampleTag]" role="button">[ExampleTag]</a></li>
+                            <li class="nav-item"><a class="tag tag--available" data-tag="[Email]" role="button">[Email]</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <hr class="mt-2 mb-5" />
+
+                <div class="form-group">
+
+                    <label for="MyTextWildCardArea2">Another example: with values coming from the server</label>
+                    <textarea id="MyTextWildCardArea2" class="my-text-wildcard-area rounded w-100" rows="3" style="height: 60px" placeholder="Insert here your text with wildcards">values coming from the server with [email] [exampletag] tags in the middle of the text</textarea>
+
+                    <span class="text-muted">Type or click on the tags bellow</span>
+
+                    <nav class="navbar navbar-expand-lg">
+                        <ul class="navbar-nav" data-toggle="tag" data-target="#MyTextWildCardArea2">
+                            <li class="nav-item"><a class="tag tag--available" data-tag="[ExampleTag]" role="button">[ExampleTag]</a></li>
+                            <li class="nav-item"><a class="tag tag--available" data-tag="[Email]" role="button">[Email]</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="src/textWildCardArea.js"></script>
+
+    <script>
+        $('.my-text-wildcard-area').textWildCardArea();
+    </script>
+
+</body>
+
+</html>
