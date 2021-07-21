@@ -79,6 +79,6 @@ The plugin doesn't have css styles, but this css can be useful for a basic style
 * Click once for remove all wildcards from the textarea  
 * If a textarea already has data coming from the server, the plugin must observe and apply the toggle state on the tags
 
-![Image of Example] (https://github.com/raafacachoeira/jquery-text-wildcard-area/blob/main/example-wildcard.PNG?raw=true)
+![Image of Example](example-wildcard.PNG)
 
 
